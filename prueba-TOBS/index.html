@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="fontawesome/css/all.min.css">
+  <link rel="shortcut icon" href="img/favicon.ico">
+  
+</head>
+<body>
+  <div class="container-card">
+    <h1 class="title">Pricing Toggle 1</h1>
+
+    <div class="btn-toggle"> 
+      <button type="button" id="js-monthly" onclick="changeMonthly()">Monthly</button>
+      <button type="button" id="js-annualy" onclick="changeAnnualy()">Annualy</button>
+    </div>
+  
+    <div class="container-options">
+      <div class="item-pricing">
+        <h3 class="item-pricing-title">Basic</h3>
+        <i class="icon-pricing fas fa-chart-pie"></i>
+        <div class="price monthly">$39<span>/Monthly</span></div>
+        <div class="price annualy">$468<span>/Annualy</span></div>
+        <ul>
+          <li>1 GB Diskspace</li>
+          <li>10 GB Bandwith</li>
+          <li>2 Email address</li>
+          <li>Wordpress Installs</li>
+          <li>Private Support</li>
+        </ul>
+        <a href="#" class="sing-up-btn">Sing Up</a>
+      </div>
+
+      <div class="item-pricing">
+        <h3 class="item-pricing-title">Premium</h3>
+        <i class="icon-pricing fas fa-chart-line"></i>
+        <div class="price monthly">$49<span>/Monthly</span></div>
+        <div class="price annualy">$588<span>/Annualy</span></div>
+        <ul>
+          <li>5 GB Diskspace</li>
+          <li>50 GB Bandwith</li>
+          <li>4 Email address</li>
+          <li>Wordpress Installs</li>
+          <li>Private Support</li>
+        </ul>
+        <a href="#" class="sing-up-btn">Sing Up</a>
+      </div>
+
+      <div class="item-pricing">
+        <h3 class="item-pricing-title">Business</h3>
+        <i class="icon-pricing fas fa-city"></i>
+        <div class="price monthly">$59<span>/Monthly</span></div>
+        <div class="price annualy">$708<span>/Annualy</span></div>
+        <ul>
+          <li>20 GB Diskspace</li>
+          <li>100 GB Bandwith</li>
+          <li>10 Email address</li>
+          <li>Wordpress Installs</li>
+          <li>Private Support</li>
+        </ul>
+        <a href="#" class="sing-up-btn">Sing Up</a>
+      </div>
+    </div>
+  </div>
+
+  <script text="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+
+
+  <!-- JS para la animación de Monthly/Annualy -->
+  <script text="text/javascript">
+
+    $('.annualy').hide();
+    var isMonthly = true;
+
+    function changeMonthly() {
+      if (!isMonthly) {
+        isMonthly = true;
+        $('.monthly, .annualy').toggle(1000);
+      }
+    }
+
+    function changeAnnualy() {
+      if (isMonthly) {
+        isMonthly = false;
+        $('.annualy, .monthly').toggle(1000);
+      }
+    }
+  </script>
+
+
+</body>
+</html>
